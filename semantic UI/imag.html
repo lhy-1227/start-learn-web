@@ -1,0 +1,65 @@
+ <!doctype html>
+ <html>
+	<head>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.css">
+
+	    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+		
+		
+	</head>
+	<body>
+		<header>
+			<div class="ui three top attached steps">
+				<div class="active  step">
+					<i class="hand point down icon"></i>
+				    <a class="content" href="./imag.html"> 1.轮播图</a>
+				</div>
+				<div class="step">
+					<i class="hand point down icon"></i>
+					<a class="content" href="./table.html">2.表单</a>
+				</div>
+				<div class="step">
+					<i class="hand point down icon"></i>
+					<a class="content" href="./van.html">3.分页</a>
+				</div>
+			</div>
+		</header>
+		
+		<div class="ui very padded center aligned segment">
+			<div class="ui text shape">
+				  <div class="sides">
+					<img class="active ui header side" src="001.jpg">
+					<img class="ui header side" src="005.jpg">
+					<img class="ui header side" src="006.jpg">
+					<img class="ui header side" src="004.jpg">
+					<img class="ui header side" src="002.jpg">
+					<img class="ui header side" src="003.jpg">
+				  </div>
+				</div>
+			<div id="btn">
+				<button class="ui icon button" id="left">
+					<i class="arrow left icon"></i>
+				</button>
+				<button class="ui icon button" id="right">
+					<i class="arrow right icon"></i>
+				</button>
+			</div>
+		</div>
+		
+		
+
+		<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$('#left').on('click',function(){
+					$('.shape').shape('flip left');
+				});
+				$('#right').on('click',function(){
+					$('.shape').shape('flip right');
+				});
+				
+			});
+			
+		</script>
+	<body>
+ </html>
