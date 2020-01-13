@@ -1,0 +1,74 @@
+<!doctype html>    <!--h5网页 自动补齐错误-->
+<!--dom  文档结构树-->
+<!--icon图标  .ico-->
+<html> <!--总标签-->
+      <head>
+	    <meta charset="utf-8"/>
+		<!--文档的初始内容，编码方式-->
+		<!--表单，个人信息注册   性别，姓名，个人简介，喜好，多选框   每个单选框点击名字才能选中， 提交按钮，重置按钮，之间有五个空格，-->
+		<title>test1</title>
+
+		<link rel="stylesheet" href="./index.css"/>
+	  </head>
+	  <body>
+	  <header>个人信息</header>
+	  
+	  <div>
+	  <form>
+       <table >
+			
+			<tr>
+			    <td >
+				<label for="name">姓名：</label>
+				</td>
+				<td colspan="2">
+			    <input type="text"  id="name" >
+				</td>
+				
+			</tr>
+			<tr>
+				<td>性别：</td>
+				<td>
+				<label for="sex">女</label>
+			    <input type="radio"  id="sex"  value="女">
+				</td>
+				<td>
+				<label for="man">男</label>
+				<input type="radio"  id="man" value="男">
+				</td>
+				
+			</tr>
+			<tr>
+				<td colspan="3">个人简介：</td>
+			</tr>
+			<tr>
+				<td colspan="3"><textarea rows="3" cols="20"></textarea></td>
+			</tr>
+			<tr>
+				<td colspan="3">喜好：</td>
+			</tr>
+			<tr>
+				<td><label for="like">打球</label>
+			    <input type="checkbox"  id="like"  value="打球"></td>
+				<td><label for="like1">上网</label>
+				<input type="checkbox"  id="like1" value="上网"></td>
+				<td><label for="like2">赌博</label>
+				<input type="checkbox"  id="like2" value="赌博"></td>
+		
+		   </tr>				
+		   <tr>
+				<td colspan="3"><input type="submit" value="Submit"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="reset" value="Reset"></td>
+				
+		   </tr>
+
+		</table>
+		</form>
+		</div>
+		<footer>
+		<p>李海燕出品</p>
+		</footer>
+	  </body>
+</html>
+
+<!--为什么scprit标签要放在body尾部：减少白屏时间，先把整个文件的内容渲染出来-->
+<!--html语义化的意义：方便爬虫；让文档结构变得清晰-->

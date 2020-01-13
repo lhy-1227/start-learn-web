@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+		<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</head>
+	<body >
+		<div>
+			<table id="al"class="table table-striped">
+			  <thead>
+				<tr id="head">
+				 
+				</tr>
+			  </thead>
+			  <tbody id="body">
+				
+			  </tbody>
+			</table>
+			<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">添加</button>
+			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<table>
+								<tr>
+									<td>name</td>
+									<td>age</td>
+								</tr>
+								<tr>
+									<td><input type="text" id="add-name"></td>
+									<td><input type="text" id="add-age"></td>
+								</tr>
+							</table>
+						</div>
+						
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+							<button id="add" type="button" class="btn btn-primary">确认添加</button>
+						</div>
+					</div><!-- /.modal-content -->
+				</div><!-- /.modal -->
+			</div>
+			<div class="modal fade" id="myChange" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<table>
+								<tr>
+									<td>name</td>
+									<td>age</td>
+								</tr>
+								<tr>
+									<td><input type="text" id="change-name"></td>
+									<td><input type="text" id="change-age"></td>
+								</tr>
+							</table>
+						</div>
+						
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+							<button id="cha" type="button" class="btn btn-primary">确认更改</button>
+						</div>
+					</div><!-- /.modal-content -->
+				</div><!-- /.modal -->
+			</div>
+		</div>
+		<script>
+		
+			let changeIndex = 0;
+			function inner(){
+				var data = [{"name":"john","age":12},{"name":"peter","age":12},{"name":"marry","age":14}]
+				var row = data.length;
+				var col = Object.keys(data[0]).length;
+				
+	
+				console.log();
+				for(let i=0;i<col;i++){
+					$("#head").append("<td>"+Object.keys(data[0])[i]+"</td>");
+				}
+				for(let i=0;i<row;i++){ 
+					
+					$("#body").append("<tr><td>"+data[i].name+"</td><td>"+data[i].age+"</td><td><button class='btn btn-default change' data-toggle='modal' data-target='#myChange'>修改</button><button class='btn btn-default delete'>删除</button>");
+					
+				}
+			}
+			function addClick(){
+				$("#add").click(function(){
+					let n = $("#add-name").val();
+					let a = $("#add-age").val();
+					console.log(a);
+					$("#body").append("<tr><td>"+n+"</td><td>"+a+"</td><td><button class='btn btn-default change' data-toggle='modal' data-target='#myChange'>修改</button><button class='btn btn-default delete'>删除</button></tr>");
+					deleteClick();
+				})
+			}
+			function deleteClick(){
+				$(".delete").each(function(){
+					$(this).click(function(){
+						($(this).parent().parent()).remove();
+					})
+				})
+			}
+			function changeClick(){
+				$("#cha").click(function(){
+					let cn = $("#change-name").val();
+					let ca = $("#change-age").val();
+					$(".change").eq(changeIndex).parent().parent().html("<tr><td>"+cn+"</td><td>"+ca+"</td><td><button class='btn btn-default change' data-toggle='modal' data-target='#myChange'>修改</button><button class='btn btn-default delete'>删除</button></td></tr>")	;
+				})
+			}
+			function tableChangeButtonClick() {
+				$(".change").each(function(index) {
+					$(this).click(function() {
+						changeIndex = index;
+					})
+				})
+			}
+			$(document).ready(function(){
+			
+				inner();
+				addClick();
+				changeClick();
+				deleteClick();
+
+			});	
+		
+		</script>	
+	
+		
+		
+	</body>
+	 
+</html>
