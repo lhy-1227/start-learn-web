@@ -1,0 +1,47 @@
+<!--dom  文档结构树-->
+<!--icon图标  .ico-->
+<!--为什么scprit标签要放在body尾部：减少白屏时间，先把整个文件的内容渲染出来-->
+<!--html语义化的意义：方便爬虫；让文档结构变得清晰-->
+内联样式优先级第二高，第一高是！important
+
+rgba-a是0的时候透明
+background-image:url('img_tree.png')  引入背景图片的方式是url
+backgroup-position:50% 50%   图片放在正中央
+文本对齐：p.main{text-align:justify}  :每一行被展开为宽度相等，左右外边距是对齐
+文本缩进：p{text-index:50px;}
+margin简写顺序：上右下左
+dom:树上的任何一个节点
+
+1.html语义化
+2.CSS优先级问题
+3.CSS盒模型
+4.垂直居中有那几种方式：1.div的字垂直居中   2.一个div相对于整个页面的垂直居中 3.margin:0 auto
+5.字体italic和oblique的区别：oblique是把正的字倾斜，italic是倾斜字
+6.外边距塌陷有几种情况
+7.css盒模型有哪几种：ie盒，谷歌盒
+8.display:none和visibility:hidden的区别:display:none dom不渲染（dom不生成），visibility生成，但隐藏，影响布局
+9.清除浮动的几种方式
+10.rem和em的区别：rem根据html的节点的字体大小换算，em是相对于周边字体大小换算
+
+
+id和class选择器
+布局，优先级，bfc，块级元素和内联元素
+
+
+dom0级和dom2级 事件委托
+js  原型链  继承  类  
+object相关方法  assgin   defineproperty   .tostring和typeof区别
+es6 promise set map    ...扩展操作符
+浅拷贝和深拷贝
+this指向   什么叫react生命周期 概念   dom驱动和数据驱动 Http协议
+
+node.js为什么支持高并发
+javascript单线程    
+react单向数据流，vue双向数据流
+防抖和节流
+
+cookie和session的区别
+浏览器缓存http缓存：鉴定缓存的过程 
+css动画  jqeury动画   媒体查询  csshck   normalice.css reset.css  什么是scss less stylus 全局通配符选择器   垂直水平居中方式   osi七层模型  tcp/udp   mac和ip的区别  三次握手  url和uri  状态码  	请求方式   restful    http和https的区别   闭包   js的函数重载   es6的bind call apply的区别 调用上下文   instanceof  npm是啥  跨域的解决方法
+
+圣杯布局   两列布局  三列布局  多列布局  流式布局 什么易布局   栅格布局 浮动布局 固态布局
